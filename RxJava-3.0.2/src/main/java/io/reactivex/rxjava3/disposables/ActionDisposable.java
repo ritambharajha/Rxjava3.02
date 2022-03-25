@@ -31,7 +31,8 @@ final class ActionDisposable extends ReferenceDisposable<Action> {
     protected void onDisposed(@NonNull Action value) {
         try {
             value.run();
-        } catch (Throwable ex) {
+        } //FIXME: Never catch throwable
+        catch (Throwable ex) {
             throw ExceptionHelper.wrapOrThrow(ex);
         }
     }
