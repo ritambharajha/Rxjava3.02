@@ -322,6 +322,7 @@ public final class FlowableFlatMapStream<T, R> extends Flowable<R> {
 
         void clearCurrentRethrowCloseError() throws Throwable {
             currentIterator = null;
+            //FIXME: close AutoCloseable
             AutoCloseable ac = currentCloseable;
             currentCloseable = null;
             if (ac != null) {
