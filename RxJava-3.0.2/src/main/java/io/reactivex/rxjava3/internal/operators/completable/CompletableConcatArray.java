@@ -21,8 +21,10 @@ import io.reactivex.rxjava3.internal.disposables.SequentialDisposable;
 
 public final class CompletableConcatArray extends Completable {
     final CompletableSource[] sources;
-
+    //CompletableSource[] sourcesa;
+// FIXME: Need to fix the exposing of the internal variable to the external class
     public CompletableConcatArray(CompletableSource[] sources) {
+        //sourcesa = sources;
         this.sources = sources;
     }
 
