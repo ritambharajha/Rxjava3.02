@@ -99,6 +99,7 @@ public final class MemoryPerf {
         Object[] array = new Object[n];
 
         Thread.sleep(100);
+        //TODO: remove forced garbage collection
         System.gc();
         Thread.sleep(100);
 
