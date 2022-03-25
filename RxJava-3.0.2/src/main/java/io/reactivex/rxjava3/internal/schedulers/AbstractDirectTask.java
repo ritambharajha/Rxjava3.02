@@ -51,6 +51,7 @@ implements Disposable, SchedulerRunnableIntrospection {
         if (f != FINISHED && f != DISPOSED) {
             if (compareAndSet(f, DISPOSED)) {
                 if (f != null) {
+                    //FIXME: Use equals() to compare object references.
                     f.cancel(runner != Thread.currentThread());
                 }
             }
