@@ -72,8 +72,8 @@ public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObs
         final AtomicBoolean downstreamDisposed;
 
         final AtomicLong requested;
-        //FIXME: remove unused fields
-        long emitted;
+
+        //long emitted;
 
         volatile boolean upstreamCanceled;
 
