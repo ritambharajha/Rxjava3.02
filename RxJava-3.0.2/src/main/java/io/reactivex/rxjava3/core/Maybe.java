@@ -5313,17 +5313,17 @@ public abstract class Maybe<T> implements MaybeSource<T> {
 
         Objects.requireNonNull(observer, "The RxJavaPlugins.onSubscribe hook returned a null MaybeObserver. Please check the handler provided to RxJavaPlugins.setOnMaybeSubscribe for invalid null returns. Further reading: https://github.com/ReactiveX/RxJava/wiki/Plugins");
 
-        try {
-            subscribeActual(observer);
-        } //FIXME: Remove it. Avoid catching NullPointerException; consider removing the cause of the NPE.
-        catch (NullPointerException ex) {
-            throw ex;
-        } catch (Throwable ex) {
-            Exceptions.throwIfFatal(ex);
-            NullPointerException npe = new NullPointerException("subscribeActual failed");
-            npe.initCause(ex);
-            throw npe;
-        }
+//        try {
+//            subscribeActual(observer);
+//        }
+//        catch (NullPointerException ex) {
+//            throw ex;
+//        } catch (Throwable ex) {
+//            Exceptions.throwIfFatal(ex);
+//            NullPointerException npe = new NullPointerException("subscribeActual failed");
+//            npe.initCause(ex);
+//            throw npe;
+//        }
     }
 
     /**
