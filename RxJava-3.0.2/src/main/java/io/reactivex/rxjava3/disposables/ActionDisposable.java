@@ -29,12 +29,12 @@ final class ActionDisposable extends ReferenceDisposable<Action> {
 
     @Override
     protected void onDisposed(@NonNull Action value) {
-        try {
-            value.run();
-        } //FIXME: Never catch throwable
-        catch (Throwable ex) {
-            throw ExceptionHelper.wrapOrThrow(ex);
-        }
+//        try {
+//            value.run();
+//        }
+//        catch (Throwable ex) {
+//            throw ExceptionHelper.wrapOrThrow(ex);
+//        }
     }
 
     @Override
