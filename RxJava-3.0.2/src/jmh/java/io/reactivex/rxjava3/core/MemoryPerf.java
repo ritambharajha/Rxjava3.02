@@ -36,7 +36,7 @@ public final class MemoryPerf {
     static final class MyRx2Subscriber implements FlowableSubscriber<Object> {
 
         org.reactivestreams.Subscription upstream;
-        //TODO: remove this unread field
+
         @Override
         public void onSubscribe(Subscription s) {
             this.upstream = s;
